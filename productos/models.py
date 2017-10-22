@@ -13,6 +13,7 @@ class Categoria(models.Model):
 
 
 class Producto(models.Model):
+    verbose_name_plural = 'Productos'
     nombre_producto = models.CharField(max_length=250)
     descripcion = models.CharField(max_length=250)
     precio = models.IntegerField(default=0)

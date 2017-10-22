@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load crudbuilder %}
+
+{% block main_content %}
+<div class="container">
+	<h3>Administraci&oacute;n</h3>
+	<hr/>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="text-center">Men&uacute;</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for key, crud in view.cruds %}
+				<tr>
+					{% with detail=key|crud_detail %}
+						<td  style="border-top: none;padding: 3px;"><a href="{% url detail.2 %}"><div style="width: 100%" class="btn btn-primary">{{detail.1|title}}</div></a></td>
+					{% endwith %}
+				</tr>
+			{% endfor %}
+		</tbody>
+
+	</table>
+</div>
+
+{% endblock %}
