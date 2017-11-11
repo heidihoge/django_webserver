@@ -15,7 +15,7 @@ class CrudListView(TemplateView):
 urlpatterns = [
 
         url(r'^admin/', admin.site.urls),
-        url(r'^productos/', include('productos.urls')),
+        url(r'^productos/',include('productos.urls')),
         url(r'^pedidos/', include('pedidos.urls')),
         url(r'^usuarios/', include('usuarios.urls')),
     ]
