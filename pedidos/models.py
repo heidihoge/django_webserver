@@ -17,7 +17,7 @@ class Pedido(models.Model):
     nombre_pedido = models.CharField(max_length=250)
     usuario = models.ForeignKey(Usuarios,default="1")
     num_pedido = models.CharField(max_length=15,default="1")
-    producto = models.ForeignKey(Producto,default="")
+    producto = models.ForeignKey(Producto, default="")
     concepto = models.CharField(max_length=200,blank=True)
     estado = models.ForeignKey(Estados)
     telefono_ubicacion = models.CharField(max_length=12, blank=True)

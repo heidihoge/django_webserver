@@ -5,7 +5,7 @@ from crudbuilder.abstract import BaseCrudBuilder
 
 class ProductoCrud(BaseCrudBuilder):
     model = Producto
-    search_fields = ['nombre_producto']
+    search_fields = ['nombre_producto', 'descripcion']
     tables2_fields = ('nombre_producto', 'categoria', 'descripcion', 'precio')
     tables2_css_class = "table table-bordered table-condensed"
     tables2_pagination = 20

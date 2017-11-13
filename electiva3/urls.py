@@ -23,6 +23,6 @@ urlpatterns = [
 try:
     crudlist_view = CrudListView.as_view()
     urlpatterns.append(url(r'^$', crudlist_view))
-    urlpatterns.append(url(r'^/',  include('crudbuilder.urls')))
+    urlpatterns.append(url(r'^',  include('crudbuilder.urls')))
 except:
     pass

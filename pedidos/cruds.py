@@ -4,8 +4,8 @@ from crudbuilder.abstract import BaseCrudBuilder
 
 class PedidosCrud(BaseCrudBuilder):
     model = Pedido
-    search_fields = ['nombre_pedido']
-    tables2_fields = ('nombre_pedido',)
+    search_fields = ['nombre_pedido', 'producto__nombre_producto']
+    tables2_fields = ('nombre_pedido','producto')
     tables2_css_class = "table table-bordered table-condensed"
     tables2_pagination = 20
     login_required = True
