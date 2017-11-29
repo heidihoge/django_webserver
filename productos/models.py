@@ -20,10 +20,19 @@ class Producto(models.Model):
     producto_foto = models.CharField(max_length=1000)
     categoria = models.ForeignKey(Categoria)
 
-    def __str__(self):
-        return self.nombre_producto
+#def __init__(self, nombre_producto, precio):
+#      self.nombre_producto = {'nombre_producto': nombre_producto}
+#      self.descripcion = {'descripcion': descripcion}
+#      self.precio = {'precio': precio}
 
 
 
+def __getitem__(self, nombre_producto):
+    return self.nombre[nombre_producto]
+
+def __getitem__(self, descripcion):
+    return self.nombre[descripcion]
 
 
+def __getitem__(self, precio):
+    return self.nombre[precio]
