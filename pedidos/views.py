@@ -5,6 +5,7 @@ from django.db.utils import OperationalError
 
 from django.http import HttpResponse
 
+
 try:
     builder = ViewBuilder('pedidos', 'pedido', PedidosCrud)
     builder.generate_crud()
